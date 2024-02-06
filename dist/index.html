@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class=" max-w-full overflow-hidden ">
+    <div class="flex flex-col justify-center items-center flex-wrap w-full h-16 bg-slate-600 bg-opacity-40   sticky overflow-hidden">
+        <h1 class="text-2xl">Quiz App</h1>
+        <div class="flex flex-row justify-between items-center w-full ">
+            <div class="felx flex-row justify-center items-center ml-2">
+                <span>Question </span>
+                <span><span id="questincount">1</span>/10</span>
+                
+            </div>
+            <span class="mr-2 flex flex-row justify-center items-center">Score : <span class="ml-1" id="score"> 0</span></span>
+        </div>
+    </div>
+
+    <div class=" w-full flex-col justify-center items-center lg:ml-4 ml-1  overflow-hidden ">
+        <!-- question -->
+        <div class="flex felx-row justify-start flex-wrap items-center gap-3 mt-7" >
+            <span id="quno">1.</span>
+            <span id="qu">Which of the following option leads to the portability and security of Java?</span>
+        </div>
+        <div class=" lg:w-[27rem] w-76  ml-4 mt-3 flex flex-col justify-start items-start">
+            <span class="flex flex-row justify-start items-center flex-wrap gap-2 border-[1px] cursor-pointer lg:w-full w-72 mb-2 border-[#646363] p-2  rounded-lg" id="op0"  onclick="optinchose('op0',0)"> <span>a.</span>Bytecode is executed by JVM</span>
+
+            <span class="flex flex-row justify-start items-center flex-wrap gap-2 border-[1px] cursor-pointer lg:w-full w-72 mb-2 border-[#646363] p-2 rounded-lg" id="op1" onclick="optinchose('op1',1)"> <span>b.</span>The applet makes the Java code secure and portable</span>
+
+            <span class="flex flex-row justify-start items-center flex-wrap gap-2 border-[1px] cursor-pointer lg:w-full w-72 mb-2 border-[#646363] p-2 rounded-lg" id="op2" onclick="optinchose('op2',2)"> <span>c.</span>Use of exception handling</span>
+
+            <span class="flex flex-row justify-start items-center flex-wrap gap-2 border-[1px] cursor-pointer lg:w-full w-72 mb-2 border-[#646363]  p-2 rounded-lg" id="op3" onclick="optinchose('op3',3)"> <span>d.</span>Dynamic binding between objects</span>
+        </div>
+        <div class="flex flex-row justify-start items-center lg:ml-80 ml-56 gap-3"  >
+            <button class="text-center py-1 px-3 bg-slate-700 text-slate-300 rounded-lg" onclick="skipthisquestion()">Skip</button>
+            <button class="text-center py-1 px-3 bg-slate-700 text-slate-300 rounded-lg hidden" id="sumbit" onclick="check()">Sumbit</button>
+        </div>
+       
+        
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
